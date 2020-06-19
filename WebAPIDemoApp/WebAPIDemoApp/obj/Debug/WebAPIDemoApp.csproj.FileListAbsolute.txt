@@ -83,3 +83,7 @@ C:\D\Pankaj\Learning\Code\ASP.NET\ASP.Net Web API\WebAPIDemoApp\WebAPIDemoApp\ob
 C:\D\Pankaj\Learning\Code\ASP.NET\ASP.Net Web API\WebAPIDemoApp\WebAPIDemoApp\obj\Debug\WebAPIDemoApp.csproj.CopyComplete
 C:\D\Pankaj\Learning\Code\ASP.NET\ASP.Net Web API\WebAPIDemoApp\WebAPIDemoApp\obj\Debug\WebAPIDemoApp.dll
 C:\D\Pankaj\Learning\Code\ASP.NET\ASP.Net Web API\WebAPIDemoApp\WebAPIDemoApp\obj\Debug\WebAPIDemoApp.pdb
+C:\D\Pankaj\Learning\Code\ASP.NET\ASP.Net Web API\WebAPIDemoApp\WebAPIDemoApp\bin\EntityFramework.dll
+C:\D\Pankaj\Learning\Code\ASP.NET\ASP.Net Web API\WebAPIDemoApp\WebAPIDemoApp\bin\EntityFramework.SqlServer.dll
+C:\D\Pankaj\Learning\Code\ASP.NET\ASP.Net Web API\WebAPIDemoApp\WebAPIDemoApp\bin\EntityFramework.xml
+C:\D\Pankaj\Learning\Code\ASP.NET\ASP.Net Web API\WebAPIDemoApp\WebAPIDemoApp\bin\EntityFramework.SqlServer.xml

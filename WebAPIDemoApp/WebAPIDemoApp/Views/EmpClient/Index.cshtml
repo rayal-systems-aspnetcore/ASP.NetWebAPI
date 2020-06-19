@@ -1,0 +1,66 @@
+﻿
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Employees</h2>
+<div>
+    <div>
+        <input type="text" name="txtEmpId" id="txtEmpId" />
+        <input type="button" name="btnGetEmployee" value="Get Employee Details" onclick="btnGetEmployee_click()" />
+        <input type="button" name="btnAddEmployee" value="Add Employee" onclick="btnAddEmployee_click()" />
+
+    </div>
+    <div>
+        <ul id="items">
+        </ul>
+    </div>
+</div>
+
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            getAllEmployees();
+        });
+
+        function getAllEmployees() {
+            $.getJSON("/api/employees", function (emps) {
+                $.each(emps, function (key, emp) {
+                    var str = emp.EmpId + ' ' + emp.EmpName + ' ' + emp.EmpSalary;
+                    $("#items").append('<li>' + str + '</li>');
+                });
+            });
+        }
+
+        function btnGetEmployee_click() {
+            $.getJSON("/api/employees/" + $('#txtEmpId').val(), function (emp) {
+                var str = emp.EmpId + ' ' + emp.EmpName + ' ' + emp.EmpSalary;
+                alert(str);
+            });
+        }
+
+        function btnAddEmployee_click() {
+            $.ajax("/api/employees/", {
+                type: "POST",
+                data: JSON.stringify({
+                    EmpName : 'Testing',
+                    EmpSalary : 10000,
+                    DeptId : 1,
+                    IsActive : true
+                }),
+                contentType: "application/json",
+                dataType: 'JSON',
+                success: function (data) {
+                    alert('Added');
+                    $('#items').html('');
+                    getAllEmployees();
+                }
+            });
+        }
+
+        function btnEditEmployee_click() {
+
+        }
+    </script>
+}
